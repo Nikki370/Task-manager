@@ -2,6 +2,10 @@
 
 A simple full-stack task manager built with Node.js, Express, MongoDB, and vanilla JavaScript. Taskflow provides a clean, responsive interface for adding, completing, filtering, and deleting tasks.
 
+<img width="1885" height="901" alt="image" src="https://github.com/user-attachments/assets/e091e4d4-2e7d-4c69-8c3d-7b6407704f8f" />
+<img width="1692" height="885" alt="image" src="https://github.com/user-attachments/assets/8732cd48-8697-4796-bced-e528189d6af3" />
+
+
 ## Features
 
 - Add new tasks
