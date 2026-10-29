@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskflow | Task manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="/">
+                <span class="brand-mark">✓</span>
+                <span>taskflow</span>
+            </a>
+            <div class="topbar-actions">
+                <span class="date-label" id="today-label"></span>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+                    <span class="theme-icon" aria-hidden="true">☾</span>
+                    <span class="theme-label">Dark mode</span>
+                </button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+                <h1>Make today <span>count.</span></h1>
+                <p class="hero-copy">Keep your priorities clear and make meaningful progress, one task at a time.</p>
+            </div>
+            <div class="progress-card">
+                <div class="progress-heading">
+                    <span>Daily progress</span>
+                    <strong id="progress-value">0%</strong>
+                </div>
+                <div class="progress-track"><span id="progress-bar"></span></div>
+                <small id="progress-copy">Let's get started</small>
+            </div>
+        </section>
+
+        <section class="task-panel">
+            <form id="task-form" class="task-form">
+                <span class="plus-icon">+</span>
+                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off" required>
+                <button type="submit">Add task</button>
+            </form>
+
+            <div class="list-header">
+                <div>
+                    <h2>My tasks</h2>
+                    <p id="task-count">0 tasks</p>
+                </div>
+                <div class="filters" role="group" aria-label="Filter tasks">
+                    <button class="filter active" data-filter="all" type="button">All</button>
+                    <button class="filter" data-filter="active" type="button">Active</button>
+                    <button class="filter" data-filter="completed" type="button">Completed</button>
+                </div>
+            </div>
+
+            <ul id="task-list"></ul>
+            <div id="empty-state" class="empty-state">
+                <div class="empty-icon">✦</div>
+                <h3>Nothing on your list</h3>
+                <p>Add a task above and turn your plans into progress.</p>
+            </div>
+            <p id="error-message" class="error-message" role="alert"></p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
